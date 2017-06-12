@@ -24,4 +24,4 @@ if [ $# -gt 0 ]; then
     exec "$@"
 fi
 
-exec $CMD
+JAVA_OPTS='-Xmx512m -Dlog4j.configuration=file:///tmp/log4j.properties -Dlog4j.debug' exec $CMD
